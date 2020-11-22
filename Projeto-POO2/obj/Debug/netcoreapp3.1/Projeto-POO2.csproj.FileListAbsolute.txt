@@ -1,0 +1,13 @@
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\bin\Debug\netcoreapp3.1\Projeto-POO2.exe
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\bin\Debug\netcoreapp3.1\Projeto-POO2.deps.json
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\bin\Debug\netcoreapp3.1\Projeto-POO2.runtimeconfig.json
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\bin\Debug\netcoreapp3.1\Projeto-POO2.runtimeconfig.dev.json
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\bin\Debug\netcoreapp3.1\Projeto-POO2.dll
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\bin\Debug\netcoreapp3.1\Projeto-POO2.pdb
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\obj\Debug\netcoreapp3.1\Projeto-POO2.csprojAssemblyReference.cache
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\obj\Debug\netcoreapp3.1\Projeto-POO2.AssemblyInfoInputs.cache
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\obj\Debug\netcoreapp3.1\Projeto-POO2.AssemblyInfo.cs
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\obj\Debug\netcoreapp3.1\Projeto-POO2.csproj.CoreCompileInputs.cache
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\obj\Debug\netcoreapp3.1\Projeto-POO2.dll
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\obj\Debug\netcoreapp3.1\Projeto-POO2.pdb
+C:\Users\PICHAU\Desktop\Bagunça\Facul\Projeto-POO2\obj\Debug\netcoreapp3.1\Projeto-POO2.genruntimeconfig.cache
