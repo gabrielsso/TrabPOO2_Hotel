@@ -23,10 +23,12 @@ public class Gerenciamento_de_reservas
         Console.WriteLine("\nObrigado por usar os nossos serviçoes, iremos dá o valor total da estádia: ");
         Servico_de_controle_gastos serv = new Servico_de_controle_gastos();
         Proxy_Serviço_De_Controle proxy = new Proxy_Serviço_De_Controle(serv);
+        Controle_financeiro cf = new Controle_financeiro();
 
         double total = proxy.Calcular_Gasto(reserva);
 
-        Console.WriteLine("\nO gasto total da reserva com 5% incluso do nosso serviço é de: R${0:0.00}\n", total);
+        Console.WriteLine("\nO gasto total da reserva com 5% incluso do nosso serviço é de: R${0:0.00}", total);
+        cf.Pagamento(total, total);
         Gerenciamento_de_Quartos.GetInstancia().Desocupar_Quarto(reserva.Get_Quarto());
         lista_de_reservas.Remove(reserva);
     }

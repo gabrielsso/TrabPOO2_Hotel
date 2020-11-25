@@ -11,4 +11,5 @@ public interface IQuarto
     int pegar_serviço_comida_usado();
     int pegar_serviço_telefone_usado();
     void Reroll_Number();
+    void reset_serviço();
 }

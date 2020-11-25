@@ -126,6 +126,7 @@ public class Gerenciamento_de_Quartos
     }
 
     public void Desocupar_Quarto(IQuarto quarto){
+        quarto.reset_serviço();
         _quartos_ocupados.Remove(quarto);
         _quartos_disponiveis.Add(quarto);
     }

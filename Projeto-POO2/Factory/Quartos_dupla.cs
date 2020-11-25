@@ -57,4 +57,9 @@ public class Quartos_dupla : IQuarto
         Random rnd = new Random();
         _num_quarto = rnd.Next(500+1);
     }
+
+    public void reset_serviço(){
+        _pediu_comida = 0;
+        _usado_tel = 0;
+    }
 }

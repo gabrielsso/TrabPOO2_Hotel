@@ -12,7 +12,7 @@ public class Servico_de_controle_gastos : IControle
         float diaria = quarto.Diaria;
         int quant_tel = quarto.pegar_serviço_telefone_usado();
         int quant_comida = quarto.pegar_serviço_comida_usado();
-        int dias_total = reservas.dia_saida.Day - reservas.dia_entrada.Day;
+        int dias_total = (reservas.dia_saida - reservas.dia_entrada).Days;
         float preco_total_comida = preco_comida * quant_comida;
         float preco_total_tel = preco_tel * quant_tel;
         float diaria_total = diaria * dias_total;
