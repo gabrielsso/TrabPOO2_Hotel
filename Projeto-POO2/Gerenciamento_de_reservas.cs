@@ -8,6 +8,11 @@ public class Gerenciamento_de_reservas
     public void Adicionar_Reserva(){
         Reservas reserv = new Reservas();
         reserv.Registrar_Reserva();
+        if (reserv.cliente == null)
+        {
+            Console.WriteLine("Ocorreu um erro no registro da reserva.");
+            return;
+        }
         lista_de_reservas.Add(reserv);
     }
 
@@ -90,6 +95,8 @@ public class Gerenciamento_de_reservas
             Console.WriteLine("\nNão possui nenhuma reserva registrada no sistema.\n");
             return;
         }
+
+        Console.WriteLine(lista_de_reservas.Count);
 
         foreach (var reserva in lista_de_reservas)
         {

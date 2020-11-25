@@ -15,34 +15,43 @@ public class Reservas
     public Clientes cliente;
 
     public void Registrar_Reserva(){
-        Console.WriteLine("\nQual tipo de acomodação quer?");
-        Console.WriteLine("1 - Simples\n2 - Dupla\n3 - Tripla");
-        int tipo_quarto = int.Parse(Console.ReadLine());
-        tipo_quarto = Checar_Opcao(tipo_quarto);
-        _quarto = Pegar_Tipo(tipo_quarto);
-        if (_quarto == null){
-            Console.WriteLine("\nOcorreu uma falha no registro do quarto, por favor refaça.\n");
+        try
+        {
+            Console.WriteLine("\nQual tipo de acomodação quer?");
+            Console.WriteLine("1 - Simples\n2 - Dupla\n3 - Tripla");
+            int tipo_quarto = int.Parse(Console.ReadLine());
+            tipo_quarto = Checar_Opcao(tipo_quarto);
+            _quarto = Pegar_Tipo(tipo_quarto);
+            if (_quarto == null){
+                Console.WriteLine("\nOcorreu uma falha no registro do quarto, por favor refaça.\n");
+                return;
+            }
+
+            Console.WriteLine("\nQuantos dias irá ficar?");
+            int dias = int.Parse(Console.ReadLine());
+            dia_entrada = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+            dia_saida = Checar_Data(dias);
+            Console.WriteLine("\nQual seu nome?");
+            String nome = Console.ReadLine();
+            Console.WriteLine("\nDia que nasceu?");
+            int dia = int.Parse(Console.ReadLine());
+            Console.WriteLine("\nMês que nasceu?");
+            int mes = int.Parse(Console.ReadLine());
+            Console.WriteLine("\nAno que nasceu?");
+            int ano = int.Parse(Console.ReadLine());
+            DateTime Nascimento = new DateTime(ano,mes,dia);
+            cliente = Registro_de_Clientes.GetInstancia().Verificar_Registro(nome, Nascimento);
+
+            Console.WriteLine("Parabéns {0}, sua reserva foi feita com sucesso\n", cliente.Get_Nome());
+            return; 
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            Gerenciamento_de_Quartos.GetInstancia().Desocupar_Quarto(_quarto);
             return;
         }
-
-        Console.WriteLine("\nQuantos dias irá ficar?");
-        int dias = int.Parse(Console.ReadLine());
-        dia_entrada = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-        dia_saida = Checar_Data(dias);
-        Console.WriteLine("\nQual seu nome?");
-        String nome = Console.ReadLine();
-        Console.WriteLine("\nDia que nasceu?");
-        int dia = int.Parse(Console.ReadLine());
-        Console.WriteLine("\nMês que nasceu?");
-        int mes = int.Parse(Console.ReadLine());
-        Console.WriteLine("\nAno que nasceu?");
-        int ano = int.Parse(Console.ReadLine());
-        DateTime Nascimento = new DateTime(ano,mes,dia);
-        cliente = Registro_de_Clientes.GetInstancia().Verificar_Registro(nome, Nascimento);
         
-
-        Console.WriteLine("Parabéns {0}, sua reserva foi feita com sucesso\n", cliente.Get_Nome());
-        return;
     }
 
     public int Checar_Opcao(int opcao){
